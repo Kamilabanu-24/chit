@@ -12,6 +12,7 @@ class ResetPassword extends StatelessWidget {
           SizedBox(
             height: 25,
           ),
+          
           Container(
             padding: EdgeInsets.only(left: 16, right: 16),
             child: Row(
@@ -131,7 +132,9 @@ class ResetPassword extends StatelessWidget {
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(5)),
               color: Color.fromRGBO(213, 186, 143, 1),
-              onPressed: () {},
+              onPressed: () {
+           
+              },
               child: Text(
                 'Get OTP',
                 style: GoogleFonts.sourceSansPro(

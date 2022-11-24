@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'chitpage2.dart';
+import 'resetpassword.dart';
+import 'getotp.dart';
 
 class ForgotPassword extends StatelessWidget {
   const ForgotPassword({super.key});
@@ -11,9 +12,6 @@ class ForgotPassword extends StatelessWidget {
     return Scaffold(
       body: ListView(
         children: [
-          SizedBox(
-            height: 25,
-          ),
           Container(
             padding: EdgeInsets.only(left: 16, right: 16),
             child: Row(
@@ -99,7 +97,7 @@ class ForgotPassword extends StatelessWidget {
               color: Color.fromRGBO(213, 186, 143, 1),
               onPressed: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => ResetPassword()));
+                    MaterialPageRoute(builder: (context) => GetOTP()));
               },
               child: Text(
                 'Get OTP',
