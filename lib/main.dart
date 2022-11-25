@@ -1,12 +1,13 @@
+import 'package:chit_app/button_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'forgotpassword.dart';
+import 'forgot_passowrd_screen.dart';
 
 void main() {
   runApp(MyApp());
 }
-                                                                                                                                                                          
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Chit App',
-      home:ChitApp(),
+      home: ChitApp(),
     );
   }
 }
@@ -141,48 +142,24 @@ class _ChitAppState extends State<ChitApp> {
             SizedBox(
               height: 30,
             ),
-            Container(
-              padding: EdgeInsets.only(left: 16,right: 16),
+            MyButton(
               height: 70,
               width: double.infinity,
-              child: MaterialButton(
-               color: Color.fromRGBO(227, 210, 183, 1),
-               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-              onPressed: (){
-                   Navigator.push(context,MaterialPageRoute(builder: (context)=>ForgotPassword()));
-              },child: Text('Sign in',style:GoogleFonts.sourceSansPro(fontSize: 16,fontWeight:FontWeight.w600,color: Color.fromRGBO(255, 255, 255, 1)),),
-              ),
+              leftpadding: 16,
+              rightpadding: 16,
+              borderRadius: 12,
+              click: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => ForgotPassword()));
+              },
+              text: ('Sign in'),
+              textcolor: Color.fromRGBO(225, 255, 255, 1),
+              size: 14,
+              backgroundcolor: Color.fromRGBO(213, 186, 143, 1),
             ),
-           
           ],
         ),
       ),
     );
   }
 }
-@override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.only(left: 16, right: 16),
-      height: 60,
-      width: 60,
-      child: MaterialButton(
-        color: Color.fromRGBO(213, 186, 143, 1),
-        onPressed: () {
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (context) => ForgotPassword()));
-        },
-        child: Text(
-          'Sign in',
-          style: GoogleFonts.sourceSansPro(
-              fontSize: 16,
-              fontWeight: FontWeight.w600,
-              color: Color.fromRGBO(255, 255, 255, 1),
-              fontStyle: FontStyle.normal),
-        ),
-      ),
-    );
-  }
-

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-import 'resetpassword.dart';
-import 'getotp.dart';
+import 'button_screen.dart';
+import 'getotp_screen.dart';
 
 class ForgotPassword extends StatelessWidget {
   const ForgotPassword({super.key});
@@ -89,22 +88,20 @@ class ForgotPassword extends StatelessWidget {
           SizedBox(
             height: 40,
           ),
-          Container(
+          MyButton(
             height: 70,
             width: double.infinity,
-            padding: EdgeInsets.only(left: 16, right: 16),
-            child: MaterialButton(
-              color: Color.fromRGBO(213, 186, 143, 1),
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => GetOTP()));
-              },
-              child: Text(
-                'Get OTP',
-                style: GoogleFonts.sourceSansPro(
-                    color: Color.fromRGBO(255, 255, 255, 1)),
-              ),
-            ),
+            leftpadding: 16,
+            rightpadding: 16,
+            borderRadius: 12,
+            click: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => GetOTP()));
+            },
+            text: ('Get OTP'),
+            textcolor: Color.fromRGBO(225, 255, 255, 1),
+            size: 14,
+            backgroundcolor: Color.fromRGBO(213, 186, 143, 1),
           ),
         ],
       ),
