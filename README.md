@@ -1,4 +1,4 @@
-# chit_ui
+# luxuryscreen
 
 A new Flutter project.
 

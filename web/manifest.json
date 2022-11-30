@@ -1,6 +1,6 @@
 {
-    "name": "chit_ui",
-    "short_name": "chit_ui",
+    "name": "luxuryscreen",
+    "short_name": "luxuryscreen",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

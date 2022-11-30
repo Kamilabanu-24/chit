@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.chit_ui">
+    package="com.example.luxuryscreen">
    <application
-        android:label="chit_ui"
+        android:label="luxuryscreen"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

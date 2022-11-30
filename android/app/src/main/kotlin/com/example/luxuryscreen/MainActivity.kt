@@ -1,4 +1,4 @@
-package com.example.chit_ui
+package com.example.luxuryscreen
 
 import io.flutter.embedding.android.FlutterActivity
 
